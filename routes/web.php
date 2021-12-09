@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\FrontendController;
+Use App\Http\Controllers\Admin\AdminController;
 
 
 /*
@@ -22,5 +23,14 @@ Use App\Http\Controllers\FrontendController;
 Route::get('/',[FrontendController::class,'index']);;
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('backend.index');
 })->name('dashboard');
+
+Route::get('/logout',[AdminController::class,'AdminLogout'])->name('admin.logout');
+
+
+
+
+//package route
+
+Route::get('/packages',[AdminController::class,'index'])->name('package');
