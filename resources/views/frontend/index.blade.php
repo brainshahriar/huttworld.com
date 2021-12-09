@@ -227,10 +227,12 @@
 		<h3 class="heading text-capitalize text-center"> Popular Destinations</h3>
 		<p class="text mt-2 mb-5 text-center">Vestibulum tellus neque, sodales vel mauris at, rhoncus finibus augue. Vestibulum urna ligula, molestie at ante ut, finibus vulputate felis.</p>
 		<div class="row inner-sec-w3layouts-w3pvt-lauinfo">
+			@foreach ($package as $item)
+
 			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
-				<h4 class="destination mb-3">China</h4>
+				<h4 class="destination mb-3">{{ $item->location }}</h4>
 				<div class="image-position position-relative">
-					<img src="images/china.jpg" class="img-fluid" alt="">
+					<img src="{{ $item->image }}" class="img-fluid" alt="">
 					<div class="rating">
 						<ul>
 							<li><span class="fa fa-star"></span></li>
@@ -243,74 +245,13 @@
 				</div>
 				<div class="destinations-info">
 					<div class="caption mb-lg-3">
-						<h4>China</h4>
+						<h4>{{ $item->location }}</h4>
 						<a href="booking.html">Book Now</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
-				<h4 class="destination mb-3">Malaysia</h4>
-				<div class="image-position position-relative">
-					<img src="images/malaysia.jpg" class="img-fluid" alt="">
-					<div class="rating">
-						<ul>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-						</ul>
-					</div>
-				</div>
-				<div class="destinations-info">
-					<div class="caption mb-lg-3">
-						<h4>Malaysia</h4>
-						<a href="booking.html">Book Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center mt-md-0 mt-4">
-				<h4 class="destination mb-3">Japan</h4>
-				<div class="image-position position-relative">
-					<img src="images/japan.jpg" class="img-fluid" alt="">
-					<div class="rating">
-						<ul>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-						</ul>
-					</div>
-				</div>
-				<div class="destinations-info">
-					<div class="caption mb-lg-3">
-						<h4>Japan</h4>
-						<a href="booking.html">Book Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center mt-md-0 mt-4">
-				<h4 class="destination mb-3">Singapore</h4>
-				<div class="image-position position-relative">
-					<img src="images/singapore.jpg" class="img-fluid" alt="">
-					<div class="rating">
-						<ul>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-							<li><span class="fa fa-star"></span></li>
-						</ul>
-					</div>
-				</div>
-				<div class="destinations-info">
-					<div class="caption mb-lg-3">
-						<h4>Singapore</h4>
-						<a href="booking.html">Book Now</a>
-					</div>
-				</div>
-			</div>
+							
+			@endforeach
 		</div>
 	</div>
 </section>
