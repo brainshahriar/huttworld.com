@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="assets/css/dark-theme.css" />
 	<link rel="stylesheet" href="assets/css/semi-dark.css" />
 	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<link rel="stylesheet" href="{{ asset('common') }}/lib/toastr/toastr.css">
 	<title>Hutt Admin</title>
 </head>
 
@@ -515,6 +516,26 @@
 	  <script src="assets/js/index.js"></script>
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>
+	<script type="text/javascript" src="{{ asset('common') }}/lib/toastr/toastr.min.js"></script>
+    <script>
+        @if(Session::has('message'))
+        var type="{{ Session::get('alert-type','info') }}"
+        switch(type){
+            case 'info':
+                toastr.info("{{ Session::get('message') }}");
+                break;
+                case 'success':
+                toastr.success("{{ Session::get('message') }}");
+                break;
+                case 'warning':
+                toastr.warning("{{ Session::get('message') }}");
+                break;
+                case 'error':
+                toastr.error("{{ Session::get('message') }}");
+                break;
+        }
+        @endif
+    </script>
 </body>
 
 </html>

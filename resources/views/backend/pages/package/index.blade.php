@@ -15,12 +15,15 @@
                     </div>
                     <hr>
                     <div class="table-responsive">
+                        @foreach ($package as $key=>$item)
+  
                         <table class="table align-middle mb-0">
                             <thead class="table-light">
                                 <tr>
                                     <th>SL.</th>
                                     <th>Image</th>
                                     <th>Price</th>
+                                    <th>Location</th>
                                     <th>Place</th>
                                     <th>Title</th>
                                     <th>Duration</th>
@@ -29,25 +32,28 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td>{{ ++$key }}</td>
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="recent-product-img">
-                                                <img src="assets/images/icons/chair.png" alt="">
+                                                <img src="{{ $item->image }}" alt="">
                                             </div>
                                         </div>
                                     </td>
-                                    <td>$64.00</td>
-                                     <td>Brooklyn Zeo</td>
-                                    <td>12 Jul 2020</td>
-                                  <td>12 Jul 2020</td>
+                                    <td>{{ $item->price }}</td>
+                                    <td>{{ $item->location }}</td>
+                                     <td>{{ $item->place }}</td>
+                                    <td>{{ $item->title }}</td>
+                                  <td>{{ $item->duration }} Days</td>
                                   <td>
                                     <a href="" class="btn btn-primary btn-sm" title="Edit Data">Edit</a>
-                                    <a href="" class="btn btn-danger btn-sm" title="delete data" id="delete">Delete</a>
+                                    <a href="{{ url('/package/delete/'.$item->id) }}" class="btn btn-danger btn-sm" title="delete data" id="delete">Delete</a>
                                 </td>   
                                 </tr>
                             </tbody>
                         </table>
+                                                  
+                        @endforeach
                     </div>
                 </div>
             </div>

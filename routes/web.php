@@ -34,3 +34,6 @@ Route::get('/logout',[AdminController::class,'AdminLogout'])->name('admin.logout
 //package route
 
 Route::get('/packages',[AdminController::class,'index'])->name('package');
+Route::post('/package-store',[AdminController::class,'storePackage'])->name('package-store');
+Route::get('/package/delete/{id}',[AdminController::class,'deletePackage']);
+

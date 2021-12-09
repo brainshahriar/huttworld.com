@@ -177,62 +177,24 @@
 		<h3 class="heading text-capitalize text-center"> Discover our tour packages</h3>
 		<p class="text mt-2 mb-5 text-center">Vestibulum tellus neque, sodales vel mauris at, rhoncus finibus augue. Vestibulum urna ligula, molestie at ante ut, finibus vulputate felis.</p>
 		<div class="row">
+			@foreach ($package as $item)
+
 			<div class="col-lg-3 col-sm-6">
 				<div class="image-tour position-relative">
-					<img src="images/p1.jpg" alt="" class="img-fluid" />
-					<p><span class="fa fa-tags"></span> <span>20$</span></p>
+					<img src="{{ $item->image }}" alt="" class="img-fluid" />
+					<p><span class="fa fa-tags"></span> <span>{{ $item->price }}$</span></p>
 				</div>
 				<div class="package-info">
-					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>Paris, France.</h6>
+					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>{{ $item->place }}</h6>
 					<h5 class="my-2">Sodales vel mauris</h5>
-					<p class="">Vestibulum tellus neque, et velit mauris at, augue.</p>
+					<p class="">{{ $item->title }}</p>
 					<ul class="listing mt-3">
-						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>10 Days</span></li>
+						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>{{ $item->duration }} Days</span></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-3 col-sm-6">
-				<div class="image-tour position-relative">
-					<img src="images/p2.jpg" alt="" class="img-fluid" />
-					<p><span class="fa fa-tags"></span> <span>20$</span></p>
-				</div>
-				<div class="package-info">
-					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>Los Angles, USA.</h6>
-					<h5 class="my-2">Sodales vel mauris</h5>
-					<p class="">Vestibulum tellus neque, et velit mauris at, augue.</p>
-					<ul class="listing mt-3">
-						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>10 Days</span></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-				<div class="image-tour position-relative">
-					<img src="images/p3.jpg" alt="" class="img-fluid" />
-					<p><span class="fa fa-tags"></span> <span>20$</span></p>
-				</div>
-				<div class="package-info">
-					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>Agra, India.</h6>
-					<h5 class="my-2">Sodales vel mauris</h5>
-					<p class="">Vestibulum tellus neque, et velit mauris at, augue.</p>
-					<ul class="listing mt-3">
-						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>10 Days</span></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-				<div class="image-tour position-relative">
-					<img src="images/p4.jpg" alt="" class="img-fluid" />
-					<p><span class="fa fa-tags"></span> <span>20$</span></p>
-				</div>
-				<div class="package-info">
-					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>Paris, France.</h6>
-					<h5 class="my-2">Sodales vel mauris</h5>
-					<p class="">Vestibulum tellus neque, et velit mauris at, augue.</p>
-					<ul class="listing mt-3">
-						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>10 Days</span></li>
-					</ul>
-				</div>
-			</div>
+							
+			@endforeach
 		</div>
 		<div class="view-package text-center mt-4">
 			<a href="packages.html">View All Packages</a>
