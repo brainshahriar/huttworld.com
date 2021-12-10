@@ -232,7 +232,7 @@
 			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
 				<h4 class="destination mb-3">{{ $item->location }}</h4>
 				<div class="image-position position-relative">
-					<img src="{{ $item->image }}" width="350" height="400" class="img-fluid" alt="">
+					<img src="{{ $item->image }}" width="350px" height="400px" class="img-fluid" alt="">
 					<div class="rating">
 						<ul>
 							<li><span class="fa fa-star"></span></li>
