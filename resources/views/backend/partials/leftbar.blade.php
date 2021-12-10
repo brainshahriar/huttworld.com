@@ -26,10 +26,10 @@
             </a>
         </li>
         <li>
-            <a href="widgets.html">
+            <a href="{{ route('booking') }}">
                 <div class="parent-icon"><i class='bx bx-cart'></i>
                 </div>
-                <div class="menu-title">Cart</div>
+                <div class="menu-title">Bookings</div>
             </a>
         </li>
         <li>

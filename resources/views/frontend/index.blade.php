@@ -18,7 +18,7 @@
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
 									<a href="about.html" class="btn mr-2">About Us</a>
-									<a href="booking.html" class="btn">Book a Tour</a>
+									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
 									<a href="about.html" class="btn mr-2">About Us</a>
-									<a href="booking.html" class="btn">Book a Tour</a>
+									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
 									<a href="about.html" class="btn mr-2">About Us</a>
-									<a href="booking.html" class="btn">Book a Tour</a>
+									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
 						</div>
@@ -66,7 +66,7 @@
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
 									<a href="about.html" class="btn mr-2">About Us</a>
-									<a href="booking.html" class="btn">Book a Tour</a>
+									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
 						</div>
@@ -213,7 +213,7 @@
 				Phasellus sed aliquam leo a massa eu fringilla. Integer ultrices finibus sed nisi. in convallis felis dapibus
 				sit amet.</p>
 				<div class="text-left mt-4">
-						<a href="booking.html">Book Now</a>
+						<a href="{{ url('booking/') }}">Book Now</a>
 				</div>
 			</div>
 		</div>
@@ -246,7 +246,7 @@
 				<div class="destinations-info">
 					<div class="caption mb-lg-3">
 						<h4>{{ $item->location }}</h4>
-						<a href="{{ url('/booking') }}">Book Now</a>
+						<a href="{{ url('booking/') }}">Book Now</a>
 					</div>
 				</div>
 			</div>

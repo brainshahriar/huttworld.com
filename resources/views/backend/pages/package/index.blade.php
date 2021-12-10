@@ -15,7 +15,7 @@
                     </div>
                     <hr>
                     <div class="table-responsive">
-                        @foreach ($package as $key=>$item)
+                
   
                         <table class="table align-middle mb-0">
                             <thead class="table-light">
@@ -30,6 +30,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
+                            @foreach ($package as $key=>$item)
                             <tbody>
                                 <tr>
                                     <td>{{ ++$key }}</td>
@@ -51,9 +52,10 @@
                                 </td>   
                                 </tr>
                             </tbody>
-                        </table>
-                                                  
+                                                                
                         @endforeach
+                        </table>
+              
                     </div>
                 </div>
             </div>

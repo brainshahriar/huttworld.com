@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li class=""><a href="services.html">Services</a></li>
 				<li class=""><a href="packages.html">Packages</a></li>
 				<li class=""><a href="contact.html">Contact</a></li>
-				<li class="booking"><a href="booking.html">Book Now</a></li>
+				<li class="booking"><a href="{{ url('booking/') }}">Book Now</a></li>
 			</ul>
 		</nav>
 		<!-- //nav -->

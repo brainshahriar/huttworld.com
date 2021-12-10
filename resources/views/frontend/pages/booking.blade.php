@@ -8,6 +8,7 @@
     <!-- Booking -->
 <section class="contact py-5">
 	<div class="container py-lg-5 py-sm-4">
+
 		<h2 class="heading text-capitalize text-center mb-lg-5 mb-4"> Book Your Tour</h2>
 		<div class="contact-grids">
 			<div class="row">
@@ -24,6 +25,7 @@
 						<div class="col-sm-6 form-group contact-forms">
 						  <input type="text" class="form-control" id="phone" placeholder="Phone" required=""> 
 						</div>
+
 						<div class="col-sm-6 form-group contact-forms">
 						  <input type="date" class="form-control" id="date" placeholder="Date" required=""> 
 						</div>
@@ -47,6 +49,14 @@
 								<option value="5+">5 or more</option>
 							</select>
 						</div> 
+           <div class="col-sm-6 form-group contact-forms">
+							<select class="form-control" id="location">
+								<option>Choose Location</option>
+                @foreach ($package as $item)
+                    <option value="{{ $item->id }}">{{ $item->place }}</option>
+                @endforeach
+							</select>
+						</div>
 						<div class="col-md-12 form-group contact-forms">
 						  <textarea class="form-control" id="message" placeholder="Message" rows="3" ></textarea>
 						</div>
@@ -96,6 +106,7 @@
     var adult=$('#adult').val('');
     var kids=$('#kids').val('');
     var message=$('#message').val('');
+    var location=$('#location').val('');
   }
   function addData()
   {
@@ -107,10 +118,11 @@
     var adult=$('#adult').val();
     var kids=$('#kids').val();
     var message=$('#message').val();
+    var location=$('#location').val();
     $.ajax({
       type:"POST",
       dataType:"json",
-      data:{name:name,email:email,phone:phone,date:date,adult:adult,kids:kids,message:message},
+      data:{name:name,email:email,phone:phone,date:date,adult:adult,kids:kids,message:message,location:location},
       url:"{{ url('/booking/store') }}",
       headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
       success:function(data)
@@ -130,62 +142,4 @@
   //add to cart
 </script>
 
-
-{{-- <script>
-      function clearData()
-  {
-    var name=$('#name').val('');
-    var email=$('#email').val('');
-    var phone=$('#phone').val('');
-    var date=$('#date').val('');
-    var adult=$('#adult').val('');
-    var kids=$('#kids').val('');
-    var message=$('#message').val('');
-  }
-    function applyCoupon()
-     {
-    var name=$('#name').val('');
-    var email=$('#email').val('');
-    var phone=$('#phone').val('');
-    var date=$('#date').val('');
-    var adult=$('#adult').val('');
-    var kids=$('#kids').val('');
-    var message=$('#message').val('');
-         
-        $.ajax({
-            type:'POST',
-            dataType:'json',
-            data:{coupon_name:coupon_name,t_amount:t_amount,total_amount:total_amount},
-            url: "{{ url('/coupon-apply') }}",  
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},    
-            success:function(data){
-            clearData();
-              let timerInterval
-            Swal.fire({
-              title: 'Message Sent!',
-              html: 'I will close in <b></b> milliseconds.',
-              timer: 2000,
-              timerProgressBar: true,
-              didOpen: () => {
-                Swal.showLoading()
-                const b = Swal.getHtmlContainer().querySelector('b')
-                timerInterval = setInterval(() => {
-                  b.textContent = Swal.getTimerLeft()
-                }, 100)
-              },
-              willClose: () => {
-                clearInterval(timerInterval)
-              }
-            }).then((result) => {
-              / Read more about handling dismissals below /
-              if (result.dismiss === Swal.DismissReason.timer) {
-                console.log('I was closed by the timer')
-              }
-            })
-             console.log('successfully data added');
-                }
-                 });
-     }
-
-</script> --}}
 @endsection

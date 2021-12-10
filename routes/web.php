@@ -31,7 +31,7 @@ Route::get('/logout',[AdminController::class,'AdminLogout'])->name('admin.logout
 
 
 
-//admin ackage route
+//admin package route
 
 Route::get('/packages',[AdminController::class,'index'])->name('package');
 Route::post('/package-store',[AdminController::class,'storePackage'])->name('package-store');
@@ -39,6 +39,9 @@ Route::get('/package/delete/{id}',[AdminController::class,'deletePackage']);
 
 
 //frontend route
-Route::get('/booking',[FrontendController::class,'indexBooking']);
+Route::get('booking/',[FrontendController::class,'indexBooking']);
 Route::post('/booking/store',[FrontendController::class,'storeBooking']);
+
+Route::get('/admin-booking',[AdminController::class,'indexBooking'])->name('booking');
+Route::get('/booking/delete/{id}',[AdminController::class,'deleteBooking']);
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Package;
+use App\Models\Booking;
 use Image;
 use Auth;
 use Carbon\Carbon;
@@ -36,7 +37,7 @@ class AdminController extends Controller
         ]);
         $notification=array(
             'message'=>'Success',
-            'alert-type'=>'success'
+            'alert-type'=>'success' 
         );
         return Redirect()->back()->with($notification);
     }
@@ -46,6 +47,20 @@ class AdminController extends Controller
         $img = $image->image;
         unlink($img);
         Package::findOrFail($id)->delete();
+        $notification=array(
+         'message'=>'Delete Success',
+         'alert-type'=>'success'
+     );
+     return Redirect()->back()->with($notification);
+    }
+    public function indexBooking()
+    {
+        $booking=Booking::all();
+        return view('backend.pages.booking',compact('booking'));
+    }
+    public function deleteBooking($id){
+
+        Booking::findOrFail($id)->delete();
         $notification=array(
          'message'=>'Delete Success',
          'alert-type'=>'success'
