@@ -45,3 +45,10 @@ Route::post('/booking/store',[FrontendController::class,'storeBooking']);
 Route::get('/admin-booking',[AdminController::class,'indexBooking'])->name('booking');
 Route::get('/booking/delete/{id}',[AdminController::class,'deleteBooking']);
 
+
+//all pages
+
+Route::get('/services',[FrontendController::class,'services']);
+Route::get('/about',[FrontendController::class,'about']);
+Route::get('/contact',[FrontendController::class,'contact']);
+Route::get('/package',[FrontendController::class,'package']);

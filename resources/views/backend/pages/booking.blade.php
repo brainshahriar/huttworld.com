@@ -29,7 +29,7 @@
                                 <tr>
                                     <td>{{ ++$key }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->location }}</td>
+                                    <td>{{ $item->package->location }}</td>
                                     <td>{{ $item->email }}</td>
                                      <td>{{ $item->phone }}</td>
                                     <td>{{ $item->date }}</td>

@@ -17,7 +17,7 @@
 								<h3 class="text-wh">Never let your memories be greater than your dreams.</h3>
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
-									<a href="about.html" class="btn mr-2">About Us</a>
+									<a href="{{ url('/about') }}" class="btn mr-2">About Us</a>
 									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
@@ -33,7 +33,7 @@
 								<h3 class="text-wh">It is better to travel than to arrive. Let's Be Adventurers.</h3>
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
-									<a href="about.html" class="btn mr-2">About Us</a>
+									<a href="{{ url('/about') }}" class="btn mr-2">About Us</a>
 									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
@@ -49,7 +49,7 @@
 								<h3 class="text-wh">Never let your memories be greater than your dreams.</h3>
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
-									<a href="about.html" class="btn mr-2">About Us</a>
+									<a href="{{ url('/about') }}" class="btn mr-2">About Us</a>
 									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
@@ -65,7 +65,7 @@
 								<h3 class="text-wh">It is better to travel than to arrive. Let's Be Adventurers.</h3>
 								<h4 class="text-wh">tristique senectus et netus et malesuada</h4>
 								<div class="buttons mt-4">
-									<a href="about.html" class="btn mr-2">About Us</a>
+									<a href="{{ url('/about') }}" class="btn mr-2">About Us</a>
 									<a href="{{ url('booking/') }}" class="btn">Book a Tour</a>
 								</div>
 							</div>
@@ -197,7 +197,7 @@
 			@endforeach
 		</div>
 		<div class="view-package text-center mt-4">
-			<a href="packages.html">View All Packages</a>
+			<a href="{{ url('/package') }}">View All Packages</a>
 		</div>
 	</div>
 </section>

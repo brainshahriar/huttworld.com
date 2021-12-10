@@ -32,4 +32,21 @@ class FrontendController extends Controller
           ]);
           return response()->json($data);
     }
+    public function services()
+    {
+        return view('services');
+    }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function package()
+    {
+        $package=Package::all();
+        return view('package',compact('package'));
+    }
 }

@@ -51,11 +51,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />
 			<ul class="menu ml-auto mt-1">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li class=""><a href="about.html">About Us</a></li>
-				<li class=""><a href="services.html">Services</a></li>
-				<li class=""><a href="packages.html">Packages</a></li>
-				<li class=""><a href="contact.html">Contact</a></li>
+				<li class="active"><a href="{{ url('/') }}">Home</a></li>
+				<li class=""><a href="{{ url('/about') }}">About Us</a></li>
+				<li class=""><a href="{{ url('/services') }}">Services</a></li>
+				<li class=""><a href="{{ url('/package') }}">Packages</a></li>
+				<li class=""><a href="{{ url('/contact') }}">Contact</a></li>
 				<li class="booking"><a href="{{ url('booking/') }}">Book Now</a></li>
 			</ul>
 		</nav>
