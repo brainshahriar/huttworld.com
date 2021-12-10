@@ -13,8 +13,8 @@
 			<div class="row">
 				<div class="col-lg-7 contact-left-form">
               
-					<form action="{{route('booking-store')}}" method="post" class="row">
-                        @csrf
+					<section class="row">
+                
 						<div class="col-sm-6 form-group contact-forms">
 						  <input type="text" class="form-control" id="name" placeholder="Name" required="">
 						</div>
@@ -27,14 +27,14 @@
 						<div class="col-sm-6 form-group contact-forms">
 						  <input type="date" class="form-control" id="date" placeholder="Date" required=""> 
 						</div>
-						<div class="col-sm-6 form-group contact-forms">
+					    <div class="col-sm-6 form-group contact-forms">
 							<select class="form-control" id="adult">
 								<option>Adults</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
 								<option value="4">4</option>
-								<option value="5">5 or more</option>
+								<option value="5+">5 or more</option>
 							</select>
 						</div>
 						<div class="col-sm-6 form-group contact-forms">
@@ -44,16 +44,16 @@
 								<option value="2">2</option>
 								<option value="3">3</option>
 								<option value="4">4</option>
-								<option value="5">5 or more</option>
+								<option value="5+">5 or more</option>
 							</select>
-						</div>
+						</div> 
 						<div class="col-md-12 form-group contact-forms">
 						  <textarea class="form-control" id="message" placeholder="Message" rows="3" ></textarea>
 						</div>
 						<div class="col-md-12 booking-button">
-							<button name="submit" type="submit"  class="btn btn-block sent-butnn">Book Now</button>
+							<button name="submit" type="submit" onclick="addData()"  class="btn btn-block sent-butnn">Book Now</button>
 						</div>
-					</form>
+					</section>
 				</div>
 				<div class="col-lg-5 contact-right pl-lg-5">
 				
@@ -99,43 +99,29 @@
   }
   function addData()
   {
-    var name=$('#name').val('');
-    var email=$('#email').val('');
-    var phone=$('#phone').val('');
-    var date=$('#date').val('');
-    var adult=$('#adult').val('');
-    var kids=$('#kids').val('');
-    var message=$('#message').val('');
+
+    var name=$('#name').val();
+    var email=$('#email').val();
+    var phone=$('#phone').val();
+    var date=$('#date').val();
+    var adult=$('#adult').val();
+    var kids=$('#kids').val();
+    var message=$('#message').val();
     $.ajax({
       type:"POST",
       dataType:"json",
       data:{name:name,email:email,phone:phone,date:date,adult:adult,kids:kids,message:message},
-      url:"{{ url('/coupon-apply') }}",
+      url:"{{ url('/booking/store') }}",
       headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
       success:function(data)
       {
         clearData();
-        let timerInterval
-            Swal.fire({
-              title: 'Message Sent!',
-              html: 'I will close in <b></b> milliseconds.',
-              timer: 2000,
-              timerProgressBar: true,
-              didOpen: () => {
-                Swal.showLoading()
-                const b = Swal.getHtmlContainer().querySelector('b')
-                timerInterval = setInterval(() => {
-                  b.textContent = Swal.getTimerLeft()
-                }, 100)
-              },
-              willClose: () => {
-                clearInterval(timerInterval)
-              }
-            }).then((result) => {
-              / Read more about handling dismissals below /
-              if (result.dismiss === Swal.DismissReason.timer) {
-                console.log('I was closed by the timer')
-              }
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfully Booking Sent',
+            showConfirmButton: false,
+            timer: 1500
             })
              console.log('successfully data added');
       }

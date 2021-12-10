@@ -19,6 +19,7 @@ class FrontendController extends Controller
         return view ('frontend.pages.booking');
     }
     public function storeBooking(Request $request){
+    
         $data=Booking::insert([
             'name'=>$request->name,
             'email'=>$request->email,

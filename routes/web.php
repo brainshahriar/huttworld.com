@@ -40,5 +40,5 @@ Route::get('/package/delete/{id}',[AdminController::class,'deletePackage']);
 
 //frontend route
 Route::get('/booking',[FrontendController::class,'indexBooking']);
-Route::post('/booking/store',[FrontendController::class,'storeBooking'])->name('booking-store');
+Route::post('/booking/store',[FrontendController::class,'storeBooking']);
 
