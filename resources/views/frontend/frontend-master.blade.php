@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- nav -->
 		<nav class="py-md-4 py-3 d-lg-flex">
 			<div id="logo">
-				<h1 class="mt-md-0 mt-2"> <a href="index.html"><span class="fa fa-map-signs"></span> <strong> HU TOURS & TRAVELS </strong> </a></h1>
+				<h1 class="mt-md-0 mt-2"> <a href="/"><img src="logo.png" alt=""></a></h1>
 			</div>
 			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
 			<input type="checkbox" id="drop" />

@@ -1,0 +1,3 @@
+database name = eduera61_huttworld
+username= eduera61_hutt
+password = B8mU6u{HY*G*

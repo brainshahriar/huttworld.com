@@ -182,11 +182,11 @@
 			<div class="col-lg-3 col-sm-6">
 				<div class="image-tour position-relative">
 					<img src="{{ $item->image }}" alt="" class="img-fluid" />
-					<p><span class="fa fa-tags"></span> <span>{{ $item->price }}$</span></p>
+					<p><span class="fa fa-tags"></span> <span>{{ $item->price }} BDT</span></p>
 				</div>
 				<div class="package-info">
-					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>{{ $item->place }}</h6>
-					<h5 class="my-2">Sodales vel mauris</h5>
+					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>{{ $item->location }}</h6>
+					<h5 class="my-2">{{ $item->place }}</h5>
 					<p class="">{{ $item->title }}</p>
 					<ul class="listing mt-3">
 						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span>{{ $item->duration }} Days</span></li>
@@ -246,7 +246,7 @@
 				<div class="destinations-info">
 					<div class="caption mb-lg-3">
 						<h4>{{ $item->location }}</h4>
-						<a href="booking.html">Book Now</a>
+						<a href="{{ url('/booking') }}">Book Now</a>
 					</div>
 				</div>
 			</div>
