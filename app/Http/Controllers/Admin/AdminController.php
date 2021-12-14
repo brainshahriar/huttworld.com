@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Package;
 use App\Models\Booking;
+use App\Models\Popular;
 use Image;
 use Auth;
 use Carbon\Carbon;
@@ -61,6 +62,39 @@ class AdminController extends Controller
     public function deleteBooking($id){
 
         Booking::findOrFail($id)->delete();
+        $notification=array(
+         'message'=>'Delete Success',
+         'alert-type'=>'success'
+     );
+     return Redirect()->back()->with($notification);
+    }
+    public function pindex(){
+        $package=Popular::all();
+        return view('backend.pages.package.pindex',compact('package'));
+    }
+    public function pstorePackage(Request $request){
+        $image = $request->file('image');
+        $name_gen=hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->save('uploads/images/'.$name_gen);
+        $save_url = 'uploads/images/'.$name_gen;
+
+        Popular::insert([
+            'image' => $save_url,
+            'location' => $request->location,
+            'created_at' => Carbon::now(),
+        ]);
+        $notification=array(
+            'message'=>'Success',
+            'alert-type'=>'success' 
+        );
+        return Redirect()->back()->with($notification);
+    }
+    public function pdeletePackage($id){
+
+        $image = Popular::findOrFail($id);
+        $img = $image->image;
+        unlink($img);
+        Popular::findOrFail($id)->delete();
         $notification=array(
          'message'=>'Delete Success',
          'alert-type'=>'success'

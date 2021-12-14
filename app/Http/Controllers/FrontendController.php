@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Package;
 use Carbon\Carbon;
 use App\Models\Booking;
+use App\Models\Popular;
 
 
 class FrontendController extends Controller
 {
     public function index(){ 
         $package=Package::all();
-        return view('frontend.index',compact('package'));
+        $ppackage=Popular::all();
+        return view('frontend.index',compact('package','ppackage'));
     }
     public function indexBooking()
     {

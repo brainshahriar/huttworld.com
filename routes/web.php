@@ -37,6 +37,13 @@ Route::get('/packages',[AdminController::class,'index'])->name('package');
 Route::post('/package-store',[AdminController::class,'storePackage'])->name('package-store');
 Route::get('/package/delete/{id}',[AdminController::class,'deletePackage']);
 
+//popular packages
+
+Route::get('/ppackages',[AdminController::class,'pindex'])->name('ppackage');
+Route::post('/ppackage-store',[AdminController::class,'pstorePackage'])->name('ppackage-store');
+Route::get('/ppackage/delete/{id}',[AdminController::class,'pdeletePackage']);
+
+
 
 //frontend route
 Route::get('booking/',[FrontendController::class,'indexBooking']);

@@ -227,7 +227,7 @@
 		<h3 class="heading text-capitalize text-center"> Popular Destinations</h3>
 		<p class="text mt-2 mb-5 text-center">Vestibulum tellus neque, sodales vel mauris at, rhoncus finibus augue. Vestibulum urna ligula, molestie at ante ut, finibus vulputate felis.</p>
 		<div class="row inner-sec-w3layouts-w3pvt-lauinfo">
-			@foreach ($package as $item)
+			@foreach ($ppackage as $item)
 
 			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
 				<h4 class="destination mb-3">{{ $item->location }}</h4>

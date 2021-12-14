@@ -26,6 +26,13 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('ppackage') }}">
+                <div class="parent-icon"><i class='bx bx-package'></i>
+                </div>
+                <div class="menu-title">Popular Packages</div>
+            </a>
+        </li>
+        <li>
             <a href="{{ route('booking') }}">
                 <div class="parent-icon"><i class='bx bx-cart'></i>
                 </div>
