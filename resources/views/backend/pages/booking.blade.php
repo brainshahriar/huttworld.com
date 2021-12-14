@@ -15,7 +15,7 @@
                                 <tr>
                                     <th>SL.</th>
                                     <th>Name</th>
-                                    <th>Location</th>
+                                    <th>Place</th>
                                     <th>Email</th>
                                     <th>Phone</th>
                                     <th>Date</th>
@@ -25,11 +25,15 @@
                                 </tr>
                             </thead>
                             @foreach ($booking as $key=>$item)
+                            
                             <tbody>
                                 <tr>
                                     <td>{{ ++$key }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->package->location }}</td>
+                    
+                
+                                    <td>{{ $item->location }}</td>
+                     
                                     <td>{{ $item->email }}</td>
                                      <td>{{ $item->phone }}</td>
                                     <td>{{ $item->date }}</td>
@@ -41,7 +45,7 @@
                                 </td>   
                                 </tr>
                             </tbody>
-                                                             
+                                                      
                         @endforeach
                         </table>
                  

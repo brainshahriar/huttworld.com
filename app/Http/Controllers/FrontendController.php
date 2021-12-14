@@ -19,7 +19,8 @@ class FrontendController extends Controller
     public function indexBooking()
     {
         $package=Package::all();
-        return view ('frontend.pages.booking',compact('package'));
+        $ppackage=Popular::all();
+        return view('frontend.pages.booking',compact('ppackage','package'));
     }
     public function storeBooking(Request $request){
         $data=Booking::insert([

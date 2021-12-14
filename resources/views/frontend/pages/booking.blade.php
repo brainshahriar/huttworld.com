@@ -31,7 +31,7 @@
 						</div>
 					    <div class="col-sm-6 form-group contact-forms">
 							<select class="form-control" id="adult">
-								<option>Adults</option>
+								<option value="Not Selected">Adults</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-sm-6 form-group contact-forms">
 							<select class="form-control" id="kids">
-								<option>Kids</option>
+								<option value="Not Selected">Kids</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -49,14 +49,14 @@
 								<option value="5+">5 or more</option>
 							</select>
 						</div> 
-           <div class="col-sm-6 form-group contact-forms">
+         <div class="col-sm-6 form-group contact-forms">
 							<select class="form-control" id="location">
-								<option>Choose Location</option>
+								<option value="Not Selected">Choose Location</option>
                 @foreach ($package as $item)
-                    <option value="{{ $item->id }}">{{ $item->place }}</option>
+                    <option value="{{ $item->place }}">{{ $item->place }}</option>
                 @endforeach
 							</select>
-						</div>
+						</div> 
 						<div class="col-md-12 form-group contact-forms">
 						  <textarea class="form-control" id="message" placeholder="Message" rows="3" ></textarea>
 						</div>
@@ -71,8 +71,9 @@
 						<img src="images/banner1.jpg" alt="" class="img-fluid" />
 						<p><span class="fa fa-tags"></span> <span>20$ - 15% off</span></p>
 					</div>
+				
+					<h4>Destination</h4>						
 					
-					<h4>Tour Description</h4>
 					<p class="mt-3">Duis nisi sapien, elementum finibus ferme ntum ed eget, aliquet et leo. Mauris hendrerit vel ex.
 					vitae luctus massa. Phas ellus sed aliquam leo et dolor. Vestibulum ullamcorper massa eut sed fringilla.</p>
 					
