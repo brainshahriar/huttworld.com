@@ -180,10 +180,12 @@
 			@foreach ($package as $item)
 
 			<div class="col-lg-3 col-sm-6">
-				<div class="image-tour position-relative">
-					<img src="{{ $item->image }}" alt="" class="img-fluid" />
+				<a href="{{ url('booking/') }}">
+				<div class="image-tour position-relative" >
+					<img src="{{ $item->image }}" alt=""  class="img-fluid" />
 					<p><span class="fa fa-tags"></span> <span>{{ $item->price }} BDT</span></p>
 				</div>
+			</a>
 				<div class="package-info">
 					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span>{{ $item->location }}</h6>
 					<h5 class="my-2">{{ $item->place }}</h5>
@@ -193,6 +195,7 @@
 					</ul>
 				</div>
 			</div>
+	
 							
 			@endforeach
 		</div>
