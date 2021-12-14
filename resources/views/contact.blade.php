@@ -16,8 +16,8 @@
                         </div>
     
                         <h6>Location</h6>
-                        <p>The company name
-                            <br>Addison Township, IL, USA. </p>
+                        <p>HU TOURS & TRAVELS
+                            <br>k-9/1,Bashundhora Road,Jamuna Future Park,Dhaka,Bangladesh</p>
                     </li>
     
                     <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-sm-0 mt-4">
@@ -25,8 +25,9 @@
                             <span class="fa fa-envelope-open-o"></span>
                         </div>
                         <h6>Phone & Email</h6>
-                        <p>+(122) 123 456 7890</p>
-                        <a href="mailto:info@example.com" class="mail">info@examplemail.com</a>
+                        <p>+8801933057219</p>
+         
+                        <a href="mailto:info@example.com" class="mail">support@huttworld.com</a>
                     </li>
                     <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-md-0 mt-4">
     
@@ -36,7 +37,7 @@
     
                         <h6>Stay In Touch</h6>
                         <ul class="social_section_1info mt-2">
-                            <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li class="mb-2 facebook"><a target="_blank" href="https://www.facebook.com/HU-tours-and-Travels-1533169800300705"><span class="fa fa-facebook"></span></a></li>
                             <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
                             <li class="google"><a href="#"><span class="fa fa-google-plus"></span></a></li>
                             <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
@@ -65,12 +66,10 @@
                         </div>
                         <div class="col-lg-6 col-md-6 contact-right pl-lg-5">
                             <h4>Do you have any questions about us? write to us.</h4>
-                            <p class="mt-md-4 mt-2">Duis nisi sapien, elementum finibus fermentum eget, aliquet et leo. Mauris hendrerit vel ex.
-                            Quisque vitae luctus massa. Phas ellus sed aliquam leo. Vestibulum ullamcorper massa eut sed fringilla. Integer ultrices finibus sed nisi.
-                            in convallis felis da bus sit amet  aliquet et leo dolor sit amet aliquet.</p>
+                            <p class="mt-md-4 mt-2">World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience.</p>
                             <h5 class="mt-lg-5 mt-3">Office Hours</h5>
-                            <p class="mt-3">Monday to Friday : 09 am to 06 pm</p>
-                            <p>Saturday and Sunay : 10 am to 04 pm</p>
+                            <p class="mt-3">Sunday to Thursday : 09 am to 06 pm</p>
+                            <p>Saturday : 10 am to 04 pm</p>
                         </div>
                     </div>
                 </div>

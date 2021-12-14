@@ -76,10 +76,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h3>Address</h3>
 				</div>
 				<div class="footer-text">
-					<p>Location : 1234 lock, Charlotte, North Carolina, United States</p>
-					<p>Phone : +12 534894364</p>
-					<p>Email : <a href="mailto:info@example.com">info@example.com</a></p>
-					<p>Fax : +12 534894364</p>
+					<p>Location : k-9/1,Bashundhora Road,Jamuna Future Park</p>
+					<p>Dhaka,Bangladesh</p>
+					<p>Phone : +8801683933310 <i class="fa fa-whatsapp" aria-hidden="true"></i></p>
+					<p>Phone : +8801722018773 </p>
+					<p>Phone : +8801924173752 </p>
+					<p>Email : <a href="mailto:support@huttworld.com">support@huttworld.com</a></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 footer-grid_section mt-sm-0 mt-4">
@@ -87,8 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h3>About Us</h3>
 				</div>
 				<div class="footer-text">
-					<p>Vivamus magna justo, laci niats eget consectetur sed, conval lis at tellus. Nulla quis lorem ipnt libero.
-					Lorem ipsum dolor.</p>
+					<p>World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience..</p>
 				</div>
 				<ul class="social_section_1info">
 					<li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
