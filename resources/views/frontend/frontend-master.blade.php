@@ -141,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- copyright -->
 <div class="copyright py-3 text-center">
-	<p>© 2019 Grand Tour. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="=_blank"> W3layouts </a></p>
+	<p>© 2019 Grand Tour. All Rights Reserved | Made by <a href="https://www.shahriar.eduera.com.bd/" target="=_blank"> Al Shahriar Mehedi </a></p>
 </div>
 <!-- //copyright -->
 
